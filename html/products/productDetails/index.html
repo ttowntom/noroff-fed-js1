@@ -20,36 +20,36 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:wght@300&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="styles.css" />
-		<script src="nav.js" defer></script>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<script src="/js/nav.js" defer></script>
 		<!-- Gallery scripts suggested by ChatGTP -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="gallery.js" defer></script>
+		<script src="/js/gallery.js" defer></script>
 	</head>
 	<body>
 		<!-- Start of header -->
 		<header>
 			<div class="container flex flex--space-between">
-				<a href="index.html"
-					><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
+				<a href="/"
+					><img src="/img/RainyDays_logo.svg" alt="Logo for Rainy Days"
 				/></a>
 				<!-- Start of desktop menu -->
 				<div class="flex">
 					<nav id="nav--desktop" class="flex">
 						<ul class="flex">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
-								<a href="productsWomen.html" class="current">Collection</a>
+								<a href="/html/products/womens/" class="current">Collection</a>
 							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/html/about/">About</a></li>
+							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
 					</nav>
 					<!-- Start of cart/checkout/hamburger -->
 					<div class="checkout-wrapper grid">
 						<div class="checkout--cart">
 							<a
-								href="checkout.html"
+								href="/html/checkout/"
 								class="cart--icon"
 								aria-label="Items in your cart"
 								>3</a
@@ -60,7 +60,7 @@
 								<i class="fas fa-bars fa-lg"></i>
 								<p class="visually-hidden">Menu</p>
 							</button>
-							<a href="checkout.html" class="sidecart--link">Check out</a>
+							<a href="/html/checkout/" class="sidecart--link">Check out</a>
 						</div>
 					</div>
 				</div>
@@ -71,14 +71,14 @@
 					data-visible="false">
 					<nav class="flex flex--column">
 						<ul class="flex flex--column">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
-								<a href="productsWomen.html" class="current--mobile"
+								<a href="/html/products/womens/" class="current--mobile"
 									>Collection</a
 								>
 							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/html/about/">About</a></li>
+							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
 					</nav>
 					<div class="checkout-wrapper grid">
@@ -110,8 +110,8 @@
 				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
 				<nav id="breadcrumbs" class="container">
 					<ul id="breadcrumbs--nav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="productsWomen.html">Women's jackets</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/html/products/womens/">Women's jackets</a></li>
 						<li class="current">Storm Chaser</li>
 					</ul>
 				</nav>
@@ -124,13 +124,21 @@
 
 				<div class="flex flex--left thumbnails" aria-hidden="true">
 					<img
-						src="img/products/stormChaser_women_01a.jpg"
+						src="/img/products/stormChaser_women_01a.jpg"
 						class="active"
 						alt="Storm Chaser" />
-					<img src="img/products/stormChaser_women_02.jpg" alt="Storm Chaser" />
-					<img src="img/products/stormChaser_women_03.jpg" alt="Storm Chaser" />
-					<img src="img/products/stormChaser_women_04.jpg" alt="Storm Chaser" />
-					<img src="img/products/stormChaser_women_05.jpg" alt="Storm Chaser" />
+					<img
+						src="/img/products/stormChaser_women_02.jpg"
+						alt="Storm Chaser" />
+					<img
+						src="/img/products/stormChaser_women_03.jpg"
+						alt="Storm Chaser" />
+					<img
+						src="/img/products/stormChaser_women_04.jpg"
+						alt="Storm Chaser" />
+					<img
+						src="/img/products/stormChaser_women_05.jpg"
+						alt="Storm Chaser" />
 				</div>
 
 				<div class="hero--content">
@@ -153,7 +161,7 @@
 							XL
 						</div>
 					</div>
-					<a href="checkout.html" class="btn--green">Add to cart</a>
+					<a href="/html/checkout/" class="btn--green">Add to cart</a>
 				</div>
 			</section>
 			<section id="product--info" class="product--details grid">
@@ -300,7 +308,9 @@
 						<div class="review--left"></div>
 						<div class="review--main">
 							<div class="review--top flex flex--left">
-								<img src="img/reviews/david.jpg" alt="Profile image of David" />
+								<img
+									src="/img/reviews/david.jpg"
+									alt="Profile image of David" />
 								<div>
 									<h3>David</h3>
 									<p>Camper and outdoor adventurer</p>
@@ -319,7 +329,9 @@
 						<div class="review--left"></div>
 						<div class="review--main">
 							<div class="review--top flex flex--left">
-								<img src="img/reviews/sarah.jpg" alt="Profile image of Sarah" />
+								<img
+									src="/img/reviews/sarah.jpg"
+									alt="Profile image of Sarah" />
 								<div>
 									<h3>Sarah</h3>
 									<p>Outdoor enthusiast, loves to hike</p>
@@ -338,7 +350,7 @@
 						<div class="review--left"></div>
 						<div class="review--main">
 							<div class="review--top flex flex--left">
-								<img src="img/reviews/alex.jpg" alt="Profile image of Alex" />
+								<img src="/img/reviews/alex.jpg" alt="Profile image of Alex" />
 								<div>
 									<h3>Alex</h3>
 									<p>Skiier</p>
@@ -357,7 +369,9 @@
 						<div class="review--left"></div>
 						<div class="review--main">
 							<div class="review--top flex flex--left">
-								<img src="img/reviews/emily.jpg" alt="Profile image of Emily" />
+								<img
+									src="/img/reviews/emily.jpg"
+									alt="Profile image of Emily" />
 								<div>
 									<h3>Emily</h3>
 									<p>Dog walker</p>
@@ -380,7 +394,7 @@
 		<footer>
 			<div class="container footer-grid grid">
 				<div id="footer-logo">
-					<img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
+					<img src="/img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
 				</div>
 				<div id="footer-about">
 					<p>
@@ -392,10 +406,10 @@
 				<nav id="footer-nav">
 					<h2>Browse</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="productsMen.html">Collection</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/html/products/mens/">Collection</a></li>
+						<li><a href="/html/about/">About</a></li>
+						<li><a href="/html/contact/">Contact</a></li>
 					</ul>
 				</nav>
 				<nav id="footer-help">

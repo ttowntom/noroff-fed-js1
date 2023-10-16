@@ -20,33 +20,33 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:wght@300&display=swap"
 			rel="stylesheet" />
-		<link rel="stylesheet" href="styles.css" />
-		<script src="nav.js" defer></script>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<script src="/js/nav.js" defer></script>
 	</head>
 	<body>
 		<!-- Start of header -->
 		<header>
 			<div class="container flex flex--space-between">
-				<a href="index.html"
-					><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
+				<a href="/"
+					><img src="/img/RainyDays_logo.svg" alt="Logo for Rainy Days"
 				/></a>
 				<!-- Start of desktop menu -->
 				<div class="flex">
 					<nav id="nav--desktop" class="flex">
 						<ul class="flex">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
-								<a href="productsWomen.html" class="current">Collection</a>
+								<a href="/html/products/womens/" class="current">Collection</a>
 							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/html/about/">About</a></li>
+							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
 					</nav>
 					<!-- Start of cart/checkout/hamburger -->
 					<div class="checkout-wrapper grid">
 						<div class="checkout--cart">
 							<a
-								href="checkout.html"
+								href="/html/checkout/"
 								class="cart--icon"
 								aria-description="Items in your cart"
 								>3</a
@@ -57,7 +57,7 @@
 								<i class="fas fa-bars fa-lg"></i>
 								<p class="visually-hidden">Menu</p>
 							</button>
-							<a href="checkout.html" class="sidecart--link">Check out</a>
+							<a href="/html/checkout/" class="sidecart--link">Check out</a>
 						</div>
 					</div>
 				</div>
@@ -68,14 +68,14 @@
 					data-visible="false">
 					<nav class="flex flex--column">
 						<ul class="flex flex--column">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="/">Home</a></li>
 							<li>
-								<a href="productsWomen.html" class="current--mobile"
+								<a href="/html/products/womens/" class="current--mobile"
 									>Collection</a
 								>
 							</li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/html/about/">About</a></li>
+							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
 					</nav>
 					<div class="checkout-wrapper grid">
@@ -108,8 +108,10 @@
 						<h1>Our collection</h1>
 						<h2>Find your style</h2>
 						<div class="hero--btn flex flex--left">
-							<a href="productsMen.html">Men's</a>
-							<a href="productsWomen.html" class="hero--btn-current">Women's</a>
+							<a href="/html/products/mens/">Men's</a>
+							<a href="/html/products/womens/" class="hero--btn-current"
+								>Women's</a
+							>
 						</div>
 					</div>
 				</div>
@@ -130,9 +132,11 @@
 			<section id="products" class="products--grid grid">
 				<h2 class="visually-hidden">Women's jackets</h2>
 				<article class="grid-col-span-2">
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/stormChaser_women_01.jpg"
+							src="/img/products/stormChaser_women_01.jpg"
 							alt="A man wearing the orange Storm Chaser rain jacket in a misty forest setting." />
 						<div class="center flex flex--column">
 							<h3>Storm Chaser</h3>
@@ -143,9 +147,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/adventureSeeker_women_01.jpg"
+							src="/img/products/adventureSeeker_women_01.jpg"
 							alt="A man wearing the gold colored Adventure Seeker rain coat, in the australian outback, with a tornado raging in the background." />
 						<div class="center flex flex--column">
 							<h3>Adventure Seeker</h3>
@@ -156,9 +162,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/mistMaster_women_01.jpg"
+							src="/img/products/mistMaster_women_01.jpg"
 							alt="A man wearing the red Mist Master rain jacket on a forest trail with heavy rain pouring down." />
 						<div class="center flex flex--column">
 							<h3>Mist Master</h3>
@@ -169,9 +177,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/riverRaider_women_01.jpg"
+							src="/img/products/riverRaider_women_01.jpg"
 							alt="A man wearing the yellow River Raider rain jacket, standing in front of a huge waterfall in a misty forest." />
 						<div class="center flex flex--column">
 							<h3>River Raider</h3>
@@ -182,9 +192,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/snowStalker_women_01.jpg"
+							src="/img/products/snowStalker_women_01.jpg"
 							alt="A man wearing the black Snow Stalker rain jacket in a snowy and mountainous winter landscape." />
 						<div class="center flex flex--column">
 							<h3>Snow Stalker</h3>
@@ -195,9 +207,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/frostFinder_women_01.jpg"
+							src="/img/products/frostFinder_women_01.jpg"
 							alt="A man wearing the teal Frost Finder rain jacket, standing in a snowy landscape with the northern lights dancing over his head." />
 						<div class="center flex flex--column">
 							<h3>Frost Finder</h3>
@@ -208,9 +222,11 @@
 					</a>
 				</article>
 				<article class="grid-col-span-2">
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/citySlicker_women_01.jpg"
+							src="/img/products/citySlicker_women_01.jpg"
 							alt="A man wearing the golden City Slicker rain jacket, standing in the pouring rain in a busy city street." />
 						<div class="center flex flex--column">
 							<h3>City Slicker</h3>
@@ -221,9 +237,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/blazeBreaker_women_01.jpg"
+							src="/img/products/blazeBreaker_women_01.jpg"
 							alt="A man wearing the brown Blaze Breaker rain jacket, standing on the beach at sunset with the ocean behind him." />
 						<div class="center flex flex--column">
 							<h3>Blaze Breaker</h3>
@@ -234,9 +252,11 @@
 					</a>
 				</article>
 				<article>
-					<a href="stormChaser.html" class="product--card flex flex--column">
+					<a
+						href="/html/products/productDetails/"
+						class="product--card flex flex--column">
 						<img
-							src="img/products/mudMuncher_women_01.jpg"
+							src="/img/products/mudMuncher_women_01.jpg"
 							alt="A man wearing the black Mud Muncher rain jacket, standing in a misty forest landscape with rain falling." />
 						<div class="center flex flex--column">
 							<h3>Mud Muncher</h3>
@@ -306,7 +326,7 @@
 		<footer>
 			<div class="container footer-grid grid">
 				<div id="footer-logo">
-					<img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
+					<img src="/img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
 				</div>
 				<div id="footer-about">
 					<p>
@@ -318,10 +338,10 @@
 				<nav id="footer-nav">
 					<h2>Browse</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="productsMen.html">Collection</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/html/products/mens/">Collection</a></li>
+						<li><a href="/html/about/">About</a></li>
+						<li><a href="/html/contact/">Contact</a></li>
 					</ul>
 				</nav>
 				<nav id="footer-help">

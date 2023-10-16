@@ -2,7 +2,7 @@
 
 A e-commerce website for a fictional company, selling rain jackets.
 
-The site can be viewed live at: [https://rainydays-thr.netlify.app/](https://rainydays-thr.netlify.app/)
+The site can be viewed live at: [https://rainydaysjs-thr.netlify.app/](https://rainydaysjs-thr.netlify.app/)
 
 ## A Noroff project repo
 

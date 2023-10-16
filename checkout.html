@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Checkout | Rainy Days</title>
+		<meta
+			name="description"
+			content="The checkout page of Rany Day's e-commerce website." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<script
+			src="https://kit.fontawesome.com/8d12afa6e5.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:wght@300&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="nav.js" defer></script>
+	</head>
+	<body>
+		<!-- Start of header -->
+		<header>
+			<div class="container flex flex--space-between">
+				<a href="index.html"
+					><img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days"
+				/></a>
+				<!-- Start of desktop menu -->
+				<div class="flex">
+					<nav id="nav--desktop" class="flex">
+						<ul class="flex">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="productsMen.html">Collection</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<!-- Start of cart/checkout/hamburger -->
+					<div class="checkout-wrapper grid">
+						<div class="checkout--cart">
+							<a
+								href="checkout.html"
+								class="cart--icon"
+								aria-description="Items in your cart"
+								>3</a
+							>
+						</div>
+						<div class="checkout--sidecart">
+							<button id="sidecart--button" aria-expanded="false">
+								<i class="fas fa-bars fa-lg"></i>
+								<p class="visually-hidden">Menu</p>
+							</button>
+							<a href="checkout.html" class="sidecart--link">Check out</a>
+						</div>
+					</div>
+				</div>
+				<!-- Start of mobile menu -->
+				<div
+					id="nav--mobile"
+					class="flex flex--column mobile-nav"
+					data-visible="false">
+					<nav class="flex flex--column">
+						<ul class="flex flex--column">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="productsMen.html">Collection</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+					<div class="checkout-wrapper grid">
+						<div class="checkout--cart">
+							<a
+								id="mobile--cart--items"
+								href="checkout.html"
+								aria-description="Items in your cart"
+								>3</a
+							>
+						</div>
+						<div class="checkout--sidecart--mobile">
+							<a
+								id="mobile--cart--link"
+								href="checkout.html"
+								class="sidecart--link"
+								>Check out</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Start of main -->
+		<main>
+			<div id="breadcrumbs--container" class="flex">
+				<input type="checkbox" id="breadcrumbs--toggle" />
+				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
+				<nav id="breadcrumbs" class="container">
+					<ul id="breadcrumbs--nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="productsWomen.html">Women's jackets</a></li>
+						<li><a href="stormChaser.html">Storm Chaser</a></li>
+						<li class="current">Checkout</li>
+					</ul>
+				</nav>
+			</div>
+			<section id="product--info" class="product--details grid">
+				<div class="bg--accent product--details-features shopping--cart">
+					<h1>Checkout</h1>
+				</div>
+				<div class="bg--accent-light split-page--spacer"></div>
+				<!-- Left/Top -->
+				<div class="bg--accent product--details-features shopping--cart">
+					<h2>Shopping cart</h2>
+					<!-- Storm Chaser -->
+					<div class="checkout--card grid">
+						<img
+							src="/img/products/stormChaser_onWhite.jpg"
+							alt="Storm Chaser" />
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>Storm Chaser</h3>
+								<p>Men's</p>
+							</div>
+							<div class="grid checkout--card-select">
+								<div>
+									<p>Size</p>
+									<div class="select">
+										<label for="size" class="visually-hidden">Size</label>
+										<select id="size" name="size">
+											<option value="small">S</option>
+											<option selected="selected" value="medium">M</option>
+											<option value="large">L</option>
+											<option value="xlarge">XL</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid grid--right">
+									<p>Quantity</p>
+									<div class="select">
+										<label for="quantity" class="visually-hidden"
+											>Quantity</label
+										>
+										<select id="quantity" name="quantity">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option selected="selected" value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong aria-description="Price">$897</strong></div>
+								<div>
+									<i
+										class="fa-solid fa-trash-can float--right"
+										aria-description="Remove from cart"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- City Slicker -->
+					<div class="checkout--card grid">
+						<img
+							src="/img/products/cityslicker_onWhite.jpg"
+							alt="City Slicker" />
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>City Slicker</h3>
+								<p>Women's</p>
+							</div>
+							<div class="grid checkout--card-select">
+								<div>
+									<p>Size</p>
+									<div class="select">
+										<label for="size2" class="visually-hidden">Size</label>
+										<select id="size2" name="size">
+											<option selected="selected" value="small">S</option>
+											<option value="medium">M</option>
+											<option value="large">L</option>
+											<option value="xlarge">XL</option>
+										</select>
+									</div>
+								</div>
+								<div class="grid grid--right">
+									<p>Quantity</p>
+									<div class="select">
+										<label for="quantity2" class="visually-hidden"
+											>Quantity</label
+										>
+										<select id="quantity2" name="quantity">
+											<option selected="selected" value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong aria-description="Price">$229</strong></div>
+								<div>
+									<i
+										class="fa-solid fa-trash-can float--right"
+										aria-description="Remove from cart"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Shipping -->
+					<div class="checkout--card grid">
+						<div class="checkout--card-icon flex center" aria-hidden="true">
+							<i class="fa-solid fa-truck-fast fa-xl"></i>
+						</div>
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="checkout--card-top">
+								<h3>Shipping</h3>
+							</div>
+							<div class="grid checkout--card-shipping">
+								<div class="flex flex--left">
+									<input
+										type="radio"
+										name="shipping"
+										value="royal-mail"
+										id="royal-mail"
+										checked="checked" />
+									<label for="royal-mail">Royal Mail</label>
+								</div>
+								<p class="right checkout--card-shipping-price">$21</p>
+								<div class="flex flex--left">
+									<input
+										type="radio"
+										name="shipping"
+										value="express"
+										id="express" />
+									<label for="express">Express</label>
+								</div>
+								<p class="right checkout--card-shipping-price">$44</p>
+							</div>
+						</div>
+					</div>
+					<!-- Cuopon -->
+					<div class="checkout--coupon">
+						<h3>Cuopon code</h3>
+						<form action="#" class="grid checkout--cuopon-form">
+							<label for="cuopon" class="visually-hidden">Cuopon code</label>
+							<input type="text" name="cuopon" id="cuopon" placeholder="Code" />
+							<input type="submit" value="Use" />
+						</form>
+					</div>
+					<!-- Summary -->
+					<div class="checkout--card grid">
+						<div class="checkout--card-icon flex center" aria-hidden="true">
+							<i class="fa-solid fa-dollar-sign fa-xl"></i>
+						</div>
+						<div class="bg--accent-light clr--black grid checkout--card-info">
+							<div class="grid checkout--card-shipping">
+								<p>Subtotal</p>
+								<p class="right checkout--card-shipping-price">$1,126</p>
+								<p>Shipping</p>
+								<p class="right checkout--card-shipping-price">+ $21</p>
+								<p>Coupon</p>
+								<p class="right checkout--card-shipping-price">- $20</p>
+							</div>
+							<div class="grid checkout--card-bottom">
+								<div><strong>Total</strong></div>
+								<div><strong class="float--right">$1,127</strong></div>
+							</div>
+						</div>
+					</div>
+					<div class="checkout--forgot">
+						<p>Forgot to add something?</p>
+						<a href="productsWomen.html" class="btn--green-light"
+							>Back to shopping</a
+						>
+					</div>
+				</div>
+				<!-- Right/Bottom -->
+				<div class="bg--accent-light clr--black shopping--cart">
+					<h2>Shipping info</h2>
+					<form
+						action="checkoutSuccess.html"
+						class="grid checkout--shipping-form">
+						<div>
+							<label for="email">Email</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="name@example.com" />
+						</div>
+						<div class="checkout--shipping-form-newsletter">
+							<input type="checkbox" name="newsletter" id="newsletter" />
+							<label for="newsletter"
+								>Sign up for the newsletter, get 20% off your next
+								purchase!</label
+							>
+						</div>
+						<div>
+							<label for="first-name">First name</label>
+							<input
+								type="text"
+								name="first-name"
+								id="first-name"
+								placeholder="First name" />
+						</div>
+						<div>
+							<label for="last-name">Last name</label>
+							<input
+								type="text"
+								name="last-name"
+								id="last-name"
+								placeholder="Last name" />
+						</div>
+						<div>
+							<label for="phone">Phone</label>
+							<input
+								type="text"
+								name="phone"
+								id="phone"
+								placeholder="+44 456 678 903" />
+						</div>
+						<div>
+							<label for="address">Address</label>
+							<input
+								type="text"
+								name="address"
+								id="address"
+								placeholder="Street address" />
+						</div>
+						<div>
+							<label for="apartment">Apartment, floor, etc.</label>
+							<input
+								type="text"
+								name="apartment"
+								id="apartment"
+								placeholder="Apartment" />
+						</div>
+						<div class="flex">
+							<div class="checkout--shipping-form-flex">
+								<label for="zip">Zip code</label>
+								<input type="text" name="zip" id="zip" placeholder="Zip" />
+							</div>
+							<div class="checkout--shipping-form-flex">
+								<label for="city">City</label>
+								<input type="text" name="city" id="city" placeholder="City" />
+							</div>
+						</div>
+						<h2>Payment info</h2>
+						<div>
+							<label for="creditcard">Credit card number</label>
+							<input
+								id="creditcard"
+								name="creditcard"
+								type="tel"
+								inputmode="numeric"
+								pattern="[0-9\s]{13,19}"
+								maxlength="19"
+								placeholder="xxxx xxxx xxxx xxxx" />
+							<!-- Suggestion from Stack Overflow: https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+						</div>
+						<div>
+							<label for="cardholder">Cardholders name</label>
+							<input
+								type="text"
+								name="cardholder"
+								id="cardholder"
+								placeholder="Full name" />
+						</div>
+						<div class="flex">
+							<div class="checkout--shipping-form-flex">
+								<label for="expiry-date">Expiry date</label>
+								<input type="date" name="expiry-date" id="expiry-date" />
+							</div>
+							<div class="checkout--shipping-form-flex">
+								<label for="ccv">CCV</label>
+								<input type="text" name="ccv" id="ccv" placeholder="123" />
+							</div>
+						</div>
+						<div class="right">
+							<input type="submit" value="Pay" />
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<!-- Start of footer -->
+		<footer>
+			<div class="container footer-grid grid">
+				<div id="footer-logo">
+					<img src="img/RainyDays_logo.svg" alt="Logo for Rainy Days" />
+				</div>
+				<div id="footer-about">
+					<p>
+						With a focus on durability and versatility, our jackets are
+						engineered to withstand various weather conditions, ensuring you
+						remain comfortable during your adventures.
+					</p>
+				</div>
+				<nav id="footer-nav">
+					<h2>Browse</h2>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="productsMen.html">Collection</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<nav id="footer-help">
+					<h2>Support</h2>
+					<ul>
+						<li><a href="#">Size guide</a></li>
+						<li><a href="#">Shipping</a></li>
+						<li><a href="#">Return policy</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+					</ul>
+				</nav>
+				<div id="footer-contact">
+					<h2 id="footer-contact-h2">Contact</h2>
+					<ul>
+						<li id="footer-phone"><a href="tel:#">+44 456 678 903</a></li>
+						<li id="footer-email"><a href="mailto:#">hey@rainydays.com</a></li>
+						<li>
+							<div class="flex flex--left">
+								<a href="#">
+									<i
+										class="fa-brands fa-instagram fa-2xl"
+										aria-description="Link to Rainy Days' Instagram channel"></i>
+								</a>
+								<a href="#">
+									<i
+										class="fa-brands fa-facebook-f fa-2xl"
+										aria-description="Link to Rainy Days' Facebook page"></i>
+								</a>
+								<a href="#">
+									<i
+										class="fa-brands fa-twitter fa-2xl"
+										aria-description="Link to Rainy Days' Twitter profile"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<div class="flex"></div>
+				</div>
+			</div>
+			<p class="copyright">&copy; 2023 Rainy Days</p>
+		</footer>
+	</body>
+</html>

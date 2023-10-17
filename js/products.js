@@ -74,8 +74,7 @@ async function getProducts() {
 
 				const cardContent = document.createElement("a");
 				cardContent.classList.add("product--card", "flex", "flex--column");
-
-				cardContent.href = `/html/products/productDetails/?id=${products[i].id}`;
+				cardContent.href = `/html/products/productDetails/?gender=${category}&id=${products[i].id}`;
 
 				const cardImg = document.createElement("img");
 				cardImg.src = products[i].image;

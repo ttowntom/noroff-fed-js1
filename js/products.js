@@ -83,7 +83,9 @@ async function getProducts() {
 				const cardText = document.createElement("div");
 				cardText.classList.add("center", "flex", "flex--column");
 				const cardTitle = document.createElement("h3");
-				cardTitle.innerText = products[i].title.replace("Rainy Days ", "");
+				cardTitle.innerText = products[i].title
+					.replace("Rainy Days ", "")
+					.replace(" Jacket", "");
 				const cardSlug = document.createElement("p");
 				cardSlug.innerText = `Color: ${products[i].baseColor}`;
 				const cardHr = document.createElement("div");

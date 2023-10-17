@@ -3,6 +3,15 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 let category = params.get("gender");
 
+// Change page title
+function changePageTitle() {
+	if (category === "female") {
+		document.title = `Women's Jackets | Rainy Days`;
+	} else {
+		document.title = `Men's Jackets | Rainy Days`;
+	}
+}
+
 // Render hero section
 // Render hero image
 const heroImage = document.querySelector(`.hero--img`);
@@ -106,6 +115,7 @@ async function getProducts() {
 			}
 			if (products[i].gender.toLowerCase() === category) {
 				createHtml();
+				changePageTitle();
 			}
 		}
 	} catch (error) {

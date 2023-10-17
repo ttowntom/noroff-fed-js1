@@ -79,6 +79,24 @@ function renderHeroSection() {
 	heroContainer.appendChild(heroButton);
 }
 
+// Render description
+function renderDescription() {
+	const descriptionContainer = document.querySelector(
+		`.product--description-container`
+	);
+	//Render header
+	const descHeader = document.createElement("h2");
+	descHeader.classList.add("product--description-header");
+	descHeader.innerText = "The ultimate protection against the elements";
+	// Render description
+	const descParagraph = document.createElement("p");
+	descParagraph.innerText = product.description;
+	// Append to description container
+	descriptionContainer.innerHTML = "";
+	descriptionContainer.appendChild(descHeader);
+	descriptionContainer.appendChild(descParagraph);
+}
+
 // Fetch product data
 const apiUrl = `https://api.noroff.dev/api/v1/rainy-days/${productId}`;
 
@@ -91,6 +109,7 @@ async function getProduct() {
 
 		renderBreadcrumbs();
 		renderHeroSection();
+		renderDescription();
 	} catch (error) {
 		console.log(error);
 	}

@@ -97,6 +97,13 @@ function renderDescription() {
 	descriptionContainer.appendChild(descParagraph);
 }
 
+// Change page title
+function changePageTitle() {
+	document.title = `${product.title
+		.replace("Rainy Days ", "")
+		.replace(" Jacket", "")} | Rainy Days`;
+}
+
 // Fetch product data
 const apiUrl = `https://api.noroff.dev/api/v1/rainy-days/${productId}`;
 
@@ -110,6 +117,7 @@ async function getProduct() {
 		renderBreadcrumbs();
 		renderHeroSection();
 		renderDescription();
+		changePageTitle();
 	} catch (error) {
 		console.log(error);
 	}

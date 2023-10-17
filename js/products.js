@@ -68,14 +68,14 @@ async function getProducts() {
 		for (let i = 0; i < products.length; i++) {
 			function createHtml() {
 				const card = document.createElement("article");
-				if (products[i].favorite) {
-					card.classList.add("grid-col-span-2");
-				}
+				// if (products[i].favorite) {
+				// 	card.classList.add("grid-col-span-2");
+				// }
 
 				const cardContent = document.createElement("a");
 				cardContent.classList.add("product--card", "flex", "flex--column");
 
-				cardContent.href = `/html/products/productDetails/?id=${products[i].id}`; //Change this
+				cardContent.href = `/html/products/productDetails/?id=${products[i].id}`;
 
 				const cardImg = document.createElement("img");
 				cardImg.src = products[i].image;

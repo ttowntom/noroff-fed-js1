@@ -1,6 +1,7 @@
+import * as window from "/js/window/index.js";
+
 // Get query string
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
+const params = window.getQueryString();
 let category = params.get("gender");
 let productId = params.get("id");
 

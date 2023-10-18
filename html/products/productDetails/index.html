@@ -25,7 +25,6 @@
 		<script src="/js/productDetails.js" type="module"></script>
 		<!-- Gallery scripts suggested by ChatGTP -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="/js/gallery.js" defer></script>
 	</head>
 	<body>
 		<!-- Start of header -->
@@ -112,11 +111,7 @@
 				<input type="checkbox" id="breadcrumbs--toggle" />
 				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
 				<nav id="breadcrumbs" class="container">
-					<ul id="breadcrumbs--nav">
-						<!-- <li><a href="/">Home</a></li>
-						<li><a href="/html/products/?gender=female">Women's jackets</a></li>
-						<li class="current">Storm Chaser</li> -->
-					</ul>
+					<ul id="breadcrumbs--nav"></ul>
 				</nav>
 			</div>
 			<section id="hero" class="grid product--grid">
@@ -128,7 +123,6 @@
 				<div class="flex flex--left thumbnails" aria-hidden="true">
 					<img
 						src="/img/products/stormChaser_women_01a.jpg"
-						class="active"
 						alt="Storm Chaser" />
 					<img
 						src="/img/products/stormChaser_women_02.jpg"

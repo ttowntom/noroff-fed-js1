@@ -86,6 +86,15 @@ async function getProduct() {
 		// Render breadcrumbs
 		const breadcrumbs = document.querySelector("#breadcrumbs--nav");
 		breadcrumbs.innerHTML = ui.renderBreadcrumbs(category, product);
+		// Render gallery
+		// -- Create thumbnails
+		const thumbnails = document.querySelector(`.thumbnails`);
+		const thumbnailsImages = ui.thumbnail(product.image, product.title);
+		thumbnails.insertBefore(thumbnailsImages, thumbnails.firstChild);
+		// -- Gallery function
+		ui.gallery();
+
+		// Render Hero section
 		renderHeroSection();
 		renderDescription();
 		changePageTitle();

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Storm Chaser | Rainy Days</title>
+		<title>Rainy Days</title>
 		<meta
 			name="description"
 			content="This high-performance jacket is designed for both men and women who love to explore nature, no matter what the weather throws their way." />
@@ -25,6 +25,7 @@
 		<!-- Gallery scripts suggested by ChatGTP -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="/js/gallery.js" defer></script>
+		<script src="/js/productDetails.js" defer></script>
 	</head>
 	<body>
 		<!-- Start of header -->
@@ -39,7 +40,9 @@
 						<ul class="flex">
 							<li><a href="/">Home</a></li>
 							<li>
-								<a href="/html/products/womens/" class="current">Collection</a>
+								<a href="/html/products/?gender=female" class="current"
+									>Collection</a
+								>
 							</li>
 							<li><a href="/html/about/">About</a></li>
 							<li><a href="/html/contact/">Contact</a></li>
@@ -73,7 +76,7 @@
 						<ul class="flex flex--column">
 							<li><a href="/">Home</a></li>
 							<li>
-								<a href="/html/products/womens/" class="current--mobile"
+								<a href="/html/products/?gender=female" class="current--mobile"
 									>Collection</a
 								>
 							</li>
@@ -110,9 +113,9 @@
 				<label for="breadcrumbs--toggle" id="breadcrumbs--toggle-label"></label>
 				<nav id="breadcrumbs" class="container">
 					<ul id="breadcrumbs--nav">
-						<li><a href="/">Home</a></li>
-						<li><a href="/html/products/womens/">Women's jackets</a></li>
-						<li class="current">Storm Chaser</li>
+						<!-- <li><a href="/">Home</a></li>
+						<li><a href="/html/products/?gender=female">Women's jackets</a></li>
+						<li class="current">Storm Chaser</li> -->
 					</ul>
 				</nav>
 			</div>
@@ -168,7 +171,7 @@
 				<div class="bg--accent-light product--spacer"></div>
 				<div class="bg--accent product--spacer"></div>
 
-				<div class="bg--accent-light clr--black">
+				<div class="bg--accent-light clr--black product--description-container">
 					<h2 class="product--description-header">
 						The ultimate protection against the elements
 					</h2>
@@ -407,7 +410,7 @@
 					<h2>Browse</h2>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/html/products/mens/">Collection</a></li>
+						<li><a href="/html/products/?gender=male">Collection</a></li>
 						<li><a href="/html/about/">About</a></li>
 						<li><a href="/html/contact/">Contact</a></li>
 					</ul>

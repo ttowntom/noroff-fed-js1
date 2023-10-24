@@ -1308,7 +1308,7 @@ Media queries
 	}
 
 	#hero--img-stormChaser {
-		--background-img: url("/img/products/stormChaser_women_01a.jpg");
+		--background-img: url("");
 		background: linear-gradient(
 				to right,
 				hsl(0deg 0% 0% / 70%),

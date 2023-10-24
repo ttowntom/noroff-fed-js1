@@ -315,6 +315,10 @@ select::-ms-expand {
 	text-decoration: underline;
 }
 
+.line-through {
+	text-decoration: line-through;
+}
+
 .cta,
 .products--text {
 	max-width: 60ch;

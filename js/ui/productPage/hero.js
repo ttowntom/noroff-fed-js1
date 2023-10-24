@@ -13,9 +13,29 @@ export function renderDetailsHeroSection(product) {
 	heroColor.innerText = product.baseColor;
 
 	// Render price tag
-	const heroPrice = document.createElement("strong");
-	heroPrice.classList.add("product--hero-price");
-	heroPrice.innerText = `$${product.price}`;
+	let heroPrice;
+	if (product.discountedPrice < product.price) {
+		heroPrice = document.createElement("div");
+		heroPrice.classList.add("grid");
+
+		// Create base price
+		let heroBasePrice = document.createElement("p");
+		heroBasePrice.classList.add("line-through");
+		heroBasePrice.innerText = `$${product.price}`;
+
+		// Create discounted price
+		let heroDiscountedPrice = document.createElement("strong");
+		heroDiscountedPrice.classList.add("product--hero-price");
+		heroDiscountedPrice.innerText = `$${product.discountedPrice}`;
+
+		// Render price
+		heroPrice.appendChild(heroDiscountedPrice);
+		heroPrice.appendChild(heroBasePrice);
+	} else {
+		heroPrice = document.createElement("strong");
+		heroPrice.classList.add("product--hero-price");
+		heroPrice.innerText = `$${product.price}`;
+	}
 
 	// Render sizes
 	const heroSizes = document.createElement("div");

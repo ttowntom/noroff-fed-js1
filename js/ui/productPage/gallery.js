@@ -18,7 +18,6 @@ export function gallery() {
 
 		// Set hero image
 		const firstThumbSrc = thumbnails[0].currentSrc;
-		console.log(firstThumbSrc);
 		heroImg.css("--background-img", "url(" + firstThumbSrc + ")");
 
 		// Add click event handler for each thumbnail

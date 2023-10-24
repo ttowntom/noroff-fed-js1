@@ -1,9 +1,10 @@
-const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/";
-
 // Get all products
-export async function getAllProducts() {
+export async function getAllProducts(apiUrl) {
 	try {
 		const response = await fetch(apiUrl);
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
 		const data = await response.json();
 		return data;
 	} catch (error) {
@@ -12,9 +13,12 @@ export async function getAllProducts() {
 }
 
 // Get a spesific product
-export async function getProduct(id) {
+export async function getProduct(apiUrl) {
 	try {
-		const response = await fetch(apiUrl + id);
+		const response = await fetch(apiUrl);
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
 		const data = await response.json();
 		return data;
 	} catch (error) {

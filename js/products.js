@@ -44,10 +44,11 @@ if (category === "female") {
 window.changePageTitle(title);
 
 // Fetch product data
+const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/";
 let products = [];
 async function getProducts() {
 	try {
-		products = await api.getAllProducts();
+		products = await api.getAllProducts(apiUrl);
 
 		// Render product cards
 		const productsContainer = document.querySelector(`#products`);
@@ -62,6 +63,7 @@ async function getProducts() {
 		}
 	} catch (error) {
 		console.log(error);
+		ui.productsError();
 	}
 }
 

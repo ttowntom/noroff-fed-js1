@@ -1,3 +1,4 @@
+import * as api from "/js/api/index.js";
 import * as window from "/js/window/index.js";
 import * as ui from "/js/ui/index.js";
 
@@ -12,9 +13,7 @@ const apiUrl = `https://api.noroff.dev/api/v1/rainy-days/${productId}`;
 let product;
 async function getProduct() {
 	try {
-		const response = await fetch(apiUrl);
-		const result = await response.json();
-		product = result;
+		product = await api.getProduct(apiUrl);
 
 		// Render breadcrumbs
 		const breadcrumbs = document.querySelector("#breadcrumbs--nav");

@@ -30,6 +30,9 @@ async function getProduct() {
 		// Render Hero section
 		ui.renderDetailsHeroSection(product);
 
+		// Handle sizes click
+		ui.handleSizeClick();
+
 		// Render description
 		ui.renderDetailDescription(product);
 
@@ -40,7 +43,7 @@ async function getProduct() {
 				.replace(" Jacket", "")} | Rainy Days`
 		);
 	} catch (error) {
-		console.log(error);
+		ui.productDetailsError();
 	}
 }
 

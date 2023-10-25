@@ -21,7 +21,8 @@
 			href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:wght@300&display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="/css/styles.css" />
-		<script src="/js/nav.js" defer></script>
+		<script src="/js/index.js" type="module"></script>
+		<script src="/js/home.js" type="module"></script>
 	</head>
 	<body>
 		<!-- Start of header -->
@@ -35,7 +36,7 @@
 					<nav id="nav--desktop" class="flex">
 						<ul class="flex">
 							<li><a href="/" class="current">Home</a></li>
-							<li><a href="/html/products/?gender=male">Collection</a></li>
+							<li><a href="/html/products/?gender=female">Collection</a></li>
 							<li><a href="/html/about/">About</a></li>
 							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
@@ -67,7 +68,7 @@
 					<nav class="flex flex--column">
 						<ul class="flex flex--column">
 							<li><a href="/" class="current--mobile">Home</a></li>
-							<li><a href="/html/products/?gender=male">Collection</a></li>
+							<li><a href="/html/products/?gender=female">Collection</a></li>
 							<li><a href="/html/about/">About</a></li>
 							<li><a href="/html/contact/">Contact</a></li>
 						</ul>
@@ -124,53 +125,7 @@
 			</section>
 			<section id="featured">
 				<h2 class="center">Meet our best sellers</h2>
-				<div class="featured--container grid">
-					<article>
-						<a
-							href="/html/products/productDetails/"
-							class="product--card flex flex--column">
-							<img
-								src="/img/products/adventureSeeker_women_01.jpg"
-								alt="A woman wearing the gold colored Adventure Seeker rain coat, in the australian outback, with a tornado raging in the background." />
-							<div class="center flex flex--column">
-								<h3>Adventure Seeker</h3>
-								<p>Discover new horizons</p>
-								<div class="hr"></div>
-								<p>See details</p>
-							</div>
-						</a>
-					</article>
-					<article>
-						<a
-							href="/html/products/productDetails/"
-							class="product--card flex flex--column">
-							<img
-								src="/img/products/stormChaser_men_01.jpg"
-								alt="A man wearing the orange Storm Chaser rain jacket in a misty forest setting." />
-							<div class="center flex flex--column">
-								<h3>Storm Chaser</h3>
-								<p>Embrace the storm with confience</p>
-								<div class="hr"></div>
-								<p>See details</p>
-							</div>
-						</a>
-					</article>
-					<article>
-						<a
-							href="/html/products/productDetails/"
-							class="product--card flex flex--column">
-							<img
-								src="/img/products/mistMaster_women_01.jpg"
-								alt="A woman wearing the red Mist Master rain jacket on a forest trail with heavy rain pouring down." />
-							<div class="center flex flex--column">
-								<h3>Mist Master</h3>
-								<p>No more excuses</p>
-								<div class="hr"></div>
-								<p>See details</p>
-							</div>
-						</a>
-					</article>
-				</div>
+				<div class="featured--container grid"></div>
 			</section>
 			<section id="newsletter">
 				<div class="diagonal--bottom">
@@ -328,7 +283,7 @@
 					<h2>Browse</h2>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/html/products/?gender=male">Collection</a></li>
+						<li><a href="/html/products/?gender=female">Collection</a></li>
 						<li><a href="/html/about/">About</a></li>
 						<li><a href="/html/contact/">Contact</a></li>
 					</ul>

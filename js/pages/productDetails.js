@@ -5,8 +5,8 @@ import * as ui from "/js/ui/index.js";
 export function productDetails() {
 	// Get query string
 	const params = window.getQueryString();
-	let category = params.get("gender");
-	let productId = params.get("id");
+	const productId = params.searchParams.get("id");
+	const category = params.searchParams.get("gender");
 
 	// Fetch product data
 	const apiUrl = `https://api.noroff.dev/api/v1/rainy-days/${productId}`;

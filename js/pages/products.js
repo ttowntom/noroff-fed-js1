@@ -5,7 +5,7 @@ import * as window from "/js/window/index.js";
 export function products() {
 	// Get query string
 	const params = window.getQueryString();
-	let category = params.get("gender");
+	let category = params.searchParams.get("gender");
 	if (!category) {
 		category = "female";
 	}

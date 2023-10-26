@@ -1,6 +1,6 @@
 export function getCart() {
 	let cart = localStorage.getItem("cartItems");
-	return cart;
-}
+	let cartItems = JSON.parse(cart);
 
-// localStorage.setItem("cartItems", []);
+	return cartItems;
+}

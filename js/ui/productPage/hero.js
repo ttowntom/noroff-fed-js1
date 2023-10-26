@@ -52,7 +52,7 @@ export function renderDetailsHeroSection(product) {
 
 	// Render button
 	const heroButton = document.createElement("a");
-	heroButton.classList.add("btn--green");
+	heroButton.classList.add("btn--green", "add-to-cart");
 	heroButton.href = "/html/checkout/";
 	heroButton.innerText = "Add to cart";
 

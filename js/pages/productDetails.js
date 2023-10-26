@@ -29,6 +29,7 @@ export function productDetails() {
 
 			// Render Hero section
 			ui.renderDetailsHeroSection(product);
+			ui.handleAddToCart(product);
 
 			// Handle sizes click
 			ui.handleSizeClick();

@@ -85,6 +85,11 @@ export function checkoutProductCard(cart) {
 			const sizeOption = document.createElement("option");
 			sizeOption.value = size;
 			sizeOption.innerText = size;
+
+			if (cart[i].selectedSize === size) {
+				sizeOption.selected = true;
+			}
+
 			sizeSelect.appendChild(sizeOption);
 		});
 
@@ -122,11 +127,17 @@ export function checkoutProductCard(cart) {
 		quantitySelect.name = "quantity-" + cart[i].id;
 
 		// Create quantity options
+		const quantity = cart[i].quantity;
 		for (let i = 1; i <= 5; i++) {
 			// Create option
 			const quantityOption = document.createElement("option");
 			quantityOption.value = i;
 			quantityOption.innerText = i;
+
+			if (quantity === i) {
+				quantityOption.selected = true;
+			}
+
 			quantitySelect.appendChild(quantityOption);
 		}
 
@@ -135,11 +146,6 @@ export function checkoutProductCard(cart) {
 		quantityDropdown.appendChild(quantitySelectContainer);
 		dropdowns.appendChild(quantityDropdown);
 		cardInfoContainer.appendChild(dropdowns);
-		//
-		//
-		// cardContainer.appendChild(cardInfoContainer);
-		//
-		//
 
 		// Create card bottom container
 		const cardBottomContainer = document.createElement("div");
@@ -150,7 +156,7 @@ export function checkoutProductCard(cart) {
 		const priceElement = document.createElement("div");
 		const price = document.createElement("strong");
 		price.ariaDescription = "Price";
-		price.innerText = "$" + cart[i].discountedPrice;
+		price.innerText = "$" + cart[i].discountedPrice * quantity;
 		priceElement.appendChild(price);
 
 		// Append price

@@ -13,8 +13,23 @@ export function handleAddToCart(product) {
 			cartItems = JSON.parse(cartItems);
 		}
 
-		// Add the new product to the cart
-		cartItems.push(product);
+		// Check if the product is already in the cart
+		let productInCart = false;
+
+		for (let i = 0; i < cartItems.length; i++) {
+			if (cartItems[i].id === product.id) {
+				// If the product is in the cart, increase its quantity
+				cartItems[i].quantity++;
+				productInCart = true;
+				break;
+			}
+		}
+
+		if (!productInCart) {
+			// If the product is not in the cart, set its quantity to 1
+			product.quantity = 1;
+			cartItems.push(product);
+		}
 
 		// Store the updated cart items back in local storage
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));

@@ -20,3 +20,7 @@ if (location.pathname === "/html/products/") {
 if (location.pathname === "/html/products/productDetails/") {
 	pages.productDetails();
 }
+
+if (location.pathname === "/html/checkout/") {
+	pages.checkout(cart);
+}

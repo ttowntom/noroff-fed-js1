@@ -1,6 +1,4 @@
 export function checkoutProductCard(cart) {
-	console.log(cart);
-
 	// Get element from page
 	const cartListElement = document.querySelector(`.shopping--cart-itemsList`);
 
@@ -52,7 +50,7 @@ export function checkoutProductCard(cart) {
 		infoTop.appendChild(infoTopGender);
 
 		// Append top info section to card
-		cardContainer.appendChild(infoTop);
+		cardInfoContainer.appendChild(infoTop);
 
 		// Create dropdowns
 		const dropdowns = document.createElement("div");
@@ -74,7 +72,7 @@ export function checkoutProductCard(cart) {
 
 		// Create sizeSelect label
 		const sizeSelectLabel = document.createElement("label");
-		sizeSelectLabel.for = "size";
+		sizeSelectLabel.setAttribute("for", "size-" + cart[i].id);
 		sizeSelectLabel.classList.add("visually-hidden");
 		sizeSelectLabel.innerText = "Size";
 		// Append label to container
@@ -82,8 +80,8 @@ export function checkoutProductCard(cart) {
 
 		// Create sizeSelect
 		const sizeSelect = document.createElement("select");
-		sizeSelect.id = "size";
-		sizeSelect.name = "size";
+		sizeSelect.id = "size-" + cart[i].id;
+		sizeSelect.name = "size-" + cart[i].id;
 
 		// Create size options
 		cart[i].sizes.forEach((size) => {
@@ -98,7 +96,6 @@ export function checkoutProductCard(cart) {
 		sizeSelectContainer.appendChild(sizeSelect);
 		sizeDropdown.appendChild(sizeSelectContainer);
 		dropdowns.appendChild(sizeDropdown);
-		console.log(sizeDropdown);
 
 		// Create dropdown for quantity
 		const quantityDropdown = document.createElement("div");
@@ -117,7 +114,7 @@ export function checkoutProductCard(cart) {
 
 		// Create quantitySelect label
 		const quantitySelectLabel = document.createElement("label");
-		quantitySelectLabel.for = "quantity";
+		quantitySelectLabel.setAttribute("for", "quantity-" + cart[i].id);
 		quantitySelectLabel.classList.add("visually-hidden");
 		quantitySelectLabel.innerText = "Quantity";
 		// Append label to container
@@ -125,23 +122,53 @@ export function checkoutProductCard(cart) {
 
 		// Create quantitySelect
 		const quantitySelect = document.createElement("select");
-		quantitySelect.id = "quantity";
-		quantitySelect.name = "quantity";
+		quantitySelect.id = "quantity-" + cart[i].id;
+		quantitySelect.name = "quantity-" + cart[i].id;
 
 		// Create quantity options
-		// FIX THIS
-		cart[i].quantitys.forEach((quantity) => {
+		for (let i = 1; i <= 5; i++) {
 			// Create option
 			const quantityOption = document.createElement("option");
-			quantityOption.value = quantity;
-			quantityOption.innerText = quantity;
+			quantityOption.value = i;
+			quantityOption.innerText = i;
 			quantitySelect.appendChild(quantityOption);
-		});
+		}
 
 		// Append quantity select to container
 		quantitySelectContainer.appendChild(quantitySelect);
 		quantityDropdown.appendChild(quantitySelectContainer);
 		dropdowns.appendChild(quantityDropdown);
-		console.log(quantityDropdown);
+		cardInfoContainer.appendChild(dropdowns);
+		cardContainer.appendChild(cardInfoContainer);
+
+		// Create card bottom container
+		const cardBottomContainer = document.createElement("div");
+		cardBottomContainer.classList.add("grid", "checkout--card-bottom");
+
+		// Create card bottom elements
+		// Create price
+		const priceElement = document.createElement("div");
+		const price = document.createElement("strong");
+		price.ariaDescription = "Price";
+		price.innerText = "$" + cart[i].discountedPrice;
+		priceElement.appendChild(price);
+
+		// Append price
+		cardBottomContainer.appendChild(priceElement);
+
+		//Create remove
+		const removeElement = document.createElement("div");
+		const removeIcon = document.createElement("i");
+		removeIcon.classList.add("fa-solid", "fa-trash-can", "float--right");
+		removeIcon.ariaDescription = "Remove from cart";
+		removeElement.appendChild(removeIcon);
+
+		// Append remove
+		cardBottomContainer.appendChild(removeElement);
+
+		// Append
+		cardContainer.appendChild(cardBottomContainer);
+		const secondChild = cartListElement.children[1];
+		cartListElement.insertBefore(cardContainer, secondChild);
 	}
 }

@@ -2,12 +2,6 @@ export function checkoutProductCard(cart) {
 	// Get element from page
 	const cartListElement = document.querySelector(`.shopping--cart-itemsList`);
 
-	// Create title
-	const cartListTitle = document.createElement("h2");
-	cartListTitle.innerText = "Shopping cart";
-	// Render title
-	cartListElement.appendChild(cartListTitle);
-
 	// Create cards
 	for (let i = 0; i < cart.length; i++) {
 		// Create card container
@@ -36,7 +30,9 @@ export function checkoutProductCard(cart) {
 
 		// Create top section elements
 		const infoTopTitle = document.createElement("h3");
-		infoTopTitle.innerText = cart[i].title;
+		infoTopTitle.innerText = cart[i].title
+			.replace("Rainy Days ", "")
+			.replace(" Jacket", "");
 
 		const infoTopGender = document.createElement("p");
 		if (cart[i].gender === "Female") {
@@ -139,7 +135,11 @@ export function checkoutProductCard(cart) {
 		quantityDropdown.appendChild(quantitySelectContainer);
 		dropdowns.appendChild(quantityDropdown);
 		cardInfoContainer.appendChild(dropdowns);
-		cardContainer.appendChild(cardInfoContainer);
+		//
+		//
+		// cardContainer.appendChild(cardInfoContainer);
+		//
+		//
 
 		// Create card bottom container
 		const cardBottomContainer = document.createElement("div");
@@ -167,7 +167,8 @@ export function checkoutProductCard(cart) {
 		cardBottomContainer.appendChild(removeElement);
 
 		// Append
-		cardContainer.appendChild(cardBottomContainer);
+		cardInfoContainer.appendChild(cardBottomContainer);
+		cardContainer.appendChild(cardInfoContainer);
 		const secondChild = cartListElement.children[1];
 		cartListElement.insertBefore(cardContainer, secondChild);
 	}

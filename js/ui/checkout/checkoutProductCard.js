@@ -1,3 +1,5 @@
+import * as ui from "/js/ui/index.js";
+
 export function checkoutProductCard(cart) {
 	// Get element from page
 	const cartListElement = document.querySelector(`.shopping--cart-itemsList`);
@@ -7,6 +9,7 @@ export function checkoutProductCard(cart) {
 		// Create card container
 		const cardContainer = document.createElement("div");
 		cardContainer.classList.add("checkout--card", "grid");
+		cardContainer.setAttribute("data-index", i);
 
 		// Create product image
 		const cardImage = document.createElement("img");
@@ -93,6 +96,13 @@ export function checkoutProductCard(cart) {
 			sizeSelect.appendChild(sizeOption);
 		});
 
+		// Add event listener to size select
+		sizeSelect.addEventListener("input", function () {
+			const newSize = sizeSelect.value;
+			cart[i].selectedSize = newSize;
+			localStorage.setItem("cartItems", JSON.stringify(cart));
+		});
+
 		// Append size select to container
 		sizeSelectContainer.appendChild(sizeSelect);
 		sizeDropdown.appendChild(sizeSelectContainer);
@@ -128,18 +138,35 @@ export function checkoutProductCard(cart) {
 
 		// Create quantity options
 		const quantity = cart[i].quantity;
-		for (let i = 1; i <= 5; i++) {
+		for (let j = 1; j <= 5; j++) {
 			// Create option
 			const quantityOption = document.createElement("option");
-			quantityOption.value = i;
-			quantityOption.innerText = i;
+			quantityOption.value = j;
+			quantityOption.innerText = j;
 
-			if (quantity === i) {
+			if (quantity == j) {
 				quantityOption.selected = true;
 			}
 
 			quantitySelect.appendChild(quantityOption);
 		}
+
+		// Add event listener to quantity select
+		quantitySelect.addEventListener("input", function () {
+			const newQuantity = quantitySelect.value;
+			const itemIndex = parseInt(cardContainer.getAttribute("data-index"));
+
+			if (!isNaN(itemIndex) && cart[itemIndex]) {
+				cart[itemIndex].quantity = newQuantity;
+				localStorage.setItem("cartItems", JSON.stringify(cart));
+
+				const newPrice = cart[itemIndex].discountedPrice * newQuantity;
+				const formattedPrice = newPrice.toFixed(2);
+				price.innerText = "$" + formattedPrice;
+
+				ui.renderTotal(cart);
+			}
+		});
 
 		// Append quantity select to container
 		quantitySelectContainer.appendChild(quantitySelect);
@@ -156,7 +183,9 @@ export function checkoutProductCard(cart) {
 		const priceElement = document.createElement("div");
 		const price = document.createElement("strong");
 		price.ariaDescription = "Price";
-		price.innerText = "$" + cart[i].discountedPrice * quantity;
+		const priceAmount = cart[i].discountedPrice * cart[i].quantity;
+		const priceFormatted = priceAmount.toFixed(2);
+		price.innerText = "$" + priceFormatted;
 		priceElement.appendChild(price);
 
 		// Append price
@@ -168,6 +197,26 @@ export function checkoutProductCard(cart) {
 		removeIcon.classList.add("fa-solid", "fa-trash-can", "float--right");
 		removeIcon.ariaDescription = "Remove from cart";
 		removeElement.appendChild(removeIcon);
+
+		// Add event listener to remove element
+		removeElement.addEventListener("click", function () {
+			const indexToRemove = parseInt(cardContainer.getAttribute("data-index")); // Get the index from the data attribute
+
+			if (!isNaN(indexToRemove)) {
+				cart.splice(indexToRemove, 1);
+
+				// Update data-index attribute for the remaining items
+				const cardContainers = document.querySelectorAll(".checkout--card");
+				cardContainers.forEach((container, index) => {
+					container.setAttribute("data-index", index);
+				});
+
+				localStorage.setItem("cartItems", JSON.stringify(cart));
+
+				cardContainer.remove();
+				ui.setCartCount();
+			}
+		});
 
 		// Append remove
 		cardBottomContainer.appendChild(removeElement);

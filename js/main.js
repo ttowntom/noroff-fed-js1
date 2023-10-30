@@ -24,3 +24,7 @@ if (location.pathname === "/html/products/productDetails/") {
 if (location.pathname === "/html/checkout/") {
 	pages.checkout(cart);
 }
+
+if (location.pathname === "/html/checkout/success/") {
+	pages.checkoutSuccess(cart);
+}

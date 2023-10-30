@@ -10,7 +10,6 @@ export function createHomeFeaturedCards(favs, apiUrl) {
 		let card = document.createElement("a");
 		card.classList.add("product--card", "flex", "flex--column");
 		card.href = `html/products/productDetails/?id=${favs[i].id}`;
-		console.log(card.href);
 
 		let image = document.createElement("img");
 		image.src = favs[i].image;

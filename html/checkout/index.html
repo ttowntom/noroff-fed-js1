@@ -18,7 +18,7 @@
 			href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&family=Merriweather:wght@300&display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="/css/styles.css" />
-		<script src="/js/index.js" type="module"></script>
+		<script src="/js/main.js" type="module"></script>
 	</head>
 	<body>
 		<!-- Start of header -->
@@ -43,9 +43,7 @@
 							<a
 								href="/html/checkout/"
 								class="cart--icon"
-								aria-description="Items in your cart"
-								>3</a
-							>
+								aria-description="Items in your cart"></a>
 						</div>
 						<div class="checkout--sidecart">
 							<button id="sidecart--button" aria-expanded="false">
@@ -74,9 +72,7 @@
 							<a
 								id="mobile--cart--items"
 								href="checkout.html"
-								aria-description="Items in your cart"
-								>3</a
-							>
+								aria-description="Items in your cart"></a>
 						</div>
 						<div class="checkout--sidecart--mobile">
 							<a
@@ -111,106 +107,10 @@
 				</div>
 				<div class="bg--accent-light split-page--spacer"></div>
 				<!-- Left/Top -->
-				<div class="bg--accent product--details-features shopping--cart">
+				<div
+					class="bg--accent product--details-features shopping--cart shopping--cart-itemsList">
 					<h2>Shopping cart</h2>
-					<!-- Storm Chaser -->
-					<div class="checkout--card grid">
-						<img
-							src="/img/products/stormChaser_onWhite.jpg"
-							alt="Storm Chaser" />
-						<div class="bg--accent-light clr--black grid checkout--card-info">
-							<div class="checkout--card-top">
-								<h3>Storm Chaser</h3>
-								<p>Men's</p>
-							</div>
-							<div class="grid checkout--card-select">
-								<div>
-									<p>Size</p>
-									<div class="select">
-										<label for="size" class="visually-hidden">Size</label>
-										<select id="size" name="size">
-											<option value="small">S</option>
-											<option selected="selected" value="medium">M</option>
-											<option value="large">L</option>
-											<option value="xlarge">XL</option>
-										</select>
-									</div>
-								</div>
-								<div class="grid grid--right">
-									<p>Quantity</p>
-									<div class="select">
-										<label for="quantity" class="visually-hidden"
-											>Quantity</label
-										>
-										<select id="quantity" name="quantity">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option selected="selected" value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="grid checkout--card-bottom">
-								<div><strong aria-description="Price">$897</strong></div>
-								<div>
-									<i
-										class="fa-solid fa-trash-can float--right"
-										aria-description="Remove from cart"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- City Slicker -->
-					<div class="checkout--card grid">
-						<img
-							src="/img/products/cityslicker_onWhite.jpg"
-							alt="City Slicker" />
-						<div class="bg--accent-light clr--black grid checkout--card-info">
-							<div class="checkout--card-top">
-								<h3>City Slicker</h3>
-								<p>Women's</p>
-							</div>
-							<div class="grid checkout--card-select">
-								<div>
-									<p>Size</p>
-									<div class="select">
-										<label for="size2" class="visually-hidden">Size</label>
-										<select id="size2" name="size">
-											<option selected="selected" value="small">S</option>
-											<option value="medium">M</option>
-											<option value="large">L</option>
-											<option value="xlarge">XL</option>
-										</select>
-									</div>
-								</div>
-								<div class="grid grid--right">
-									<p>Quantity</p>
-									<div class="select">
-										<label for="quantity2" class="visually-hidden"
-											>Quantity</label
-										>
-										<select id="quantity2" name="quantity">
-											<option selected="selected" value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
-											<option value="5">5</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="grid checkout--card-bottom">
-								<div><strong aria-description="Price">$229</strong></div>
-								<div>
-									<i
-										class="fa-solid fa-trash-can float--right"
-										aria-description="Remove from cart"></i>
-								</div>
-							</div>
-						</div>
-					</div>
+
 					<!-- Shipping -->
 					<div class="checkout--card grid">
 						<div class="checkout--card-icon flex center" aria-hidden="true">
@@ -257,18 +157,24 @@
 						<div class="checkout--card-icon flex center" aria-hidden="true">
 							<i class="fa-solid fa-dollar-sign fa-xl"></i>
 						</div>
-						<div class="bg--accent-light clr--black grid checkout--card-info">
+						<div
+							class="bg--accent-light clr--black grid checkout--card-info checkout--">
 							<div class="grid checkout--card-shipping">
 								<p>Subtotal</p>
-								<p class="right checkout--card-shipping-price">$1,126</p>
+								<p
+									class="right checkout--card-shipping-price checkout--subtotal"></p>
 								<p>Shipping</p>
-								<p class="right checkout--card-shipping-price">+ $21</p>
+								<p
+									class="right checkout--card-shipping-price checkout--shippingCost"></p>
 								<p>Coupon</p>
-								<p class="right checkout--card-shipping-price">- $20</p>
+								<p
+									class="right checkout--card-shipping-price checkout--cuopunAmount"></p>
 							</div>
 							<div class="grid checkout--card-bottom">
 								<div><strong>Total</strong></div>
-								<div><strong class="float--right">$1,127</strong></div>
+								<div>
+									<strong class="float--right checkout--total">$1,127</strong>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -5,7 +5,6 @@ import * as ui from "/js/ui/index.js";
 export function productDetails() {
 	// Get query string
 	const params = window.getQueryString();
-	console.log(params);
 	const productId = params.searchParams.get("id");
 	const category = params.searchParams.get("gender");
 
@@ -18,8 +17,7 @@ export function productDetails() {
 			product = await api.getProduct(apiUrl);
 
 			// Render breadcrumbs
-			const breadcrumbs = document.querySelector("#breadcrumbs--nav");
-			breadcrumbs.innerHTML = ui.renderBreadcrumbs(category, product);
+			ui.renderBreadcrumbs();
 			// Render gallery
 			// -- Create thumbnails
 			const thumbnails = document.querySelector(`.thumbnails`);
@@ -29,7 +27,7 @@ export function productDetails() {
 			ui.gallery();
 
 			// Render Hero section
-			ui.renderDetailsHeroSection(product);
+			ui.renderDetailsHeroSection(product, productId, category);
 			ui.handleAddToCart(product);
 
 			// Handle sizes click

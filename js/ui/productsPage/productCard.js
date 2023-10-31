@@ -1,8 +1,5 @@
 export function createProductCard(products, category, product) {
 	const card = document.createElement("article");
-	// if (products[product].favorite) {
-	// 	card.classList.add("grid-col-span-2");
-	// }
 
 	const cardContent = document.createElement("a");
 	cardContent.classList.add("product--card", "flex", "flex--column");

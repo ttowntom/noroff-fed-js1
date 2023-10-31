@@ -10,6 +10,8 @@ export function checkoutSuccess() {
 			cost: 21,
 		};
 	}
+	// Render breadcrumbs
+	ui.renderBreadcrumbs();
 
 	// Render product cards
 	ui.renderCheckoutSuccessProductCards();

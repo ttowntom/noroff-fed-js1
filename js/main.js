@@ -17,7 +17,10 @@ if (location.pathname === "/html/products/") {
 	pages.products();
 }
 
-if (location.pathname === "/html/products/productDetails/") {
+if (
+	location.pathname === "/html/products/productdetails/" ||
+	location.pathname === "/html/products/productDetails/"
+) {
 	pages.productDetails();
 }
 

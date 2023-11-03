@@ -55,7 +55,7 @@ export function renderDetailsHeroSection(product, productId, category) {
 	// Render button
 	const heroButton = document.createElement("a");
 	heroButton.classList.add("btn--green", "add-to-cart");
-	heroButton.href = `/html/checkout/?id=${productId}`;
+	heroButton.href = `/checkout/?id=${productId}`;
 	heroButton.innerText = "Add to cart";
 
 	// Append to hero section

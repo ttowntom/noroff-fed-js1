@@ -3,7 +3,7 @@ export function createProductCard(products, category, product) {
 
 	const cardContent = document.createElement("a");
 	cardContent.classList.add("product--card", "flex", "flex--column");
-	cardContent.href = `/html/products/productDetails/?gender=${category}&id=${products[product].id}`;
+	cardContent.href = `/products/productDetails/?gender=${category}&id=${products[product].id}`;
 
 	const cardImg = document.createElement("img");
 	cardImg.src = products[product].image;

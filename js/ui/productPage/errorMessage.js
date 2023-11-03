@@ -11,7 +11,7 @@ export function productDetailsError() {
 
 	const errorBackButton = document.createElement("a");
 	errorBackButton.classList.add("btn--green");
-	errorBackButton.href = "/html/products/";
+	errorBackButton.href = "/products/";
 	errorBackButton.text = "Back to shop";
 
 	error.appendChild(errorTitle);

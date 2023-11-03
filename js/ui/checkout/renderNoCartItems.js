@@ -17,7 +17,7 @@ export function renderNoCartItems() {
 	const button = document.createElement("a");
 	button.classList.add("btn--green-light");
 	button.innerText = "Back to shopping";
-	button.href = "/html/products/?gender=female";
+	button.href = "/products/?gender=female";
 	content.appendChild(button);
 
 	// Render info

@@ -13,21 +13,21 @@ if (location.pathname === "/") {
 	pages.home();
 }
 
-if (location.pathname === "/html/products/") {
+if (location.pathname === "/products/") {
 	pages.products();
 }
 
 if (
-	location.pathname === "/html/products/productdetails/" ||
-	location.pathname === "/html/products/productDetails/"
+	location.pathname === "/products/productdetails/" ||
+	location.pathname === "/products/productDetails/"
 ) {
 	pages.productDetails();
 }
 
-if (location.pathname === "/html/checkout/") {
+if (location.pathname === "/checkout/") {
 	pages.checkout(cart);
 }
 
-if (location.pathname === "/html/checkout/success/") {
+if (location.pathname === "/checkout/success/") {
 	pages.checkoutSuccess(cart);
 }

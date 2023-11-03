@@ -31,7 +31,7 @@ export async function renderBreadcrumbs() {
 		const bcCategory = document.createElement("li");
 		const aCategory = document.createElement("a");
 
-		aCategory.href = `/html/products/?gender=${category}`;
+		aCategory.href = `/products/?gender=${category}`;
 		aCategory.innerText =
 			category === "female" ? `Women's jackets` : `Men's jackets`;
 		bcCategory.appendChild(aCategory);
@@ -45,15 +45,15 @@ export async function renderBreadcrumbs() {
 
 		// Create product link
 		const bcProductLink = document.createElement("a");
-		bcProductLink.href = `/html/products/productDetails/?id=${productId}`;
+		bcProductLink.href = `/products/productDetails/?id=${productId}`;
 		bcProductLink.innerText = product.title
 			.replace("Rainy Days ", "")
 			.replace(" Jacket", "");
 
 		// Render on product details page
 		if (
-			location.pathname === "/html/products/productdetails/" ||
-			location.pathname === "/html/products/productDetails/"
+			location.pathname === "/products/productdetails/" ||
+			location.pathname === "/products/productDetails/"
 		) {
 			bcProduct.innerText = product.title
 				.replace("Rainy Days ", "")
@@ -67,7 +67,7 @@ export async function renderBreadcrumbs() {
 		const bcCheckout = document.createElement("li");
 
 		// Render on checkout page
-		if (location.pathname === "/html/checkout/") {
+		if (location.pathname === "/checkout/") {
 			// Append product link to li
 			bcProduct.appendChild(bcProductLink);
 			breadcrumbs.appendChild(bcProduct);
@@ -83,7 +83,7 @@ export async function renderBreadcrumbs() {
 		bcCheckoutSuccess.innerText = "Checkout confirmation";
 
 		// Render on checkout success page
-		if (location.pathname === "/html/checkout/success/") {
+		if (location.pathname === "/checkout/success/") {
 			// Append product link to ul
 			bcProduct.appendChild(bcProductLink);
 			breadcrumbs.appendChild(bcProduct);

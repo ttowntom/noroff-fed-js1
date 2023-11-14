@@ -1,4 +1,4 @@
-# Rainy Days (with JS)
+# Rainy Days with JS and IxD improvements
 
 A e-commerce website for a fictional company, selling rain jackets.
 
